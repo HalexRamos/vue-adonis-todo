@@ -1,15 +1,34 @@
 <template>
   <Panel title="Projects">
-    <div v-for="project in projects" :key="project.id">
-      {{ project.title }}
+    <div class="project pt-4 mt-2" v-for="project in projects" :key="project.id">
+      <v-layout row wrap>
+        <v-flex xs9 class="text-xs-left">
+          <span v-if="!project.isEditMode">
+            {{ project.title }}
+          </span>
+
+          <v-text-field autofocus v-if="project.isEditMode" :value="project.title"
+            @input="setProjectTitle({project, title: $event})" @keyup.enter="saveProject(project)">
+          </v-text-field>
+        </v-flex>
+        <v-flex xs3>
+          <v-icon v-if="!project.isEditMode" @click="setEditMode(project)">
+            edit
+          </v-icon>
+          <v-icon v-if="project.isEditMode" @click="saveProject(project)">
+            check
+          </v-icon>
+          <v-icon @click="deleteProject(project)">
+            delete
+          </v-icon>
+        </v-flex>
+      </v-layout>
+
     </div>
-    <v-layout row wrap>
+    <v-layout row wrap class="mt-4">
       <v-flex xs8>
-        <v-text-field
-        placeholder="My project name..."
-        @input="setNewProjectName"
-        :value="newProjectName"
-        >
+        <v-text-field placeholder="My project name...." @onInput="setNewProjectName" :value="newProjectName"
+          @keyup.enter="createProject(project)">
         </v-text-field>
       </v-flex>
       <v-flex xs4>
@@ -26,6 +45,9 @@
 import { mapActions, mapMutations, mapState } from 'vuex';
 
 export default {
+  mounted() {
+    this.fetchProjects();
+  },
   computed: {
     ...mapState('projects', [
       'newProjectName',
@@ -35,14 +57,27 @@ export default {
   methods: {
     ...mapMutations('projects', [
       'setNewProjectName',
+      'setEditMode',
+      'setProjectTitle',
     ]),
     ...mapActions('projects', [
       'createProject',
+      'fetchProjects',
+      'saveProject',
+      'deleteProject',
     ]),
   },
 };
 </script>
 
 <style>
-
+.project {
+  font-size: 24px;
+}
+.icon {
+  cursor: pointer;
+}
+.icon:hover {
+  color: #333;
+}
 </style>
