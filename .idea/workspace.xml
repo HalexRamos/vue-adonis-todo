@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aabd0b53-2868-4f71-b64e-4d2d03fc6ef0" name="Changes" comment="1:57:15">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Panel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Panel.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Projects.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Toolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Projects.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Register.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +62,7 @@
       <workItem from="1657493517253" duration="133000" />
       <workItem from="1657493792944" duration="412000" />
       <workItem from="1657582035976" duration="2548000" />
+      <workItem from="1657669886600" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="1:57:15">
       <created>1657494195817</created>

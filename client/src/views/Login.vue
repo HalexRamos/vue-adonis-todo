@@ -1,16 +1,16 @@
 <template>
-  <v-container class="mt-5">
+  <v-container>
     <v-layout row wrap>
       <v-flex xs6 offset-xs3>
         <h1>Login</h1>
-        <v-text-field label="Email" type="email" laceholder="Email" :value="loginEmail" @input="setLoginEmail">
-        </v-text-field>
-        <v-text-field label="Password" type="password" placeholder="Password" autocomplete="new-password"
-          :value="loginPassword" @input="setLoginPassword">
-        </v-text-field>
+
+        <v-text-field label="Email" placeholder="Email" :value="loginEmail" @input="setLoginEmail"></v-text-field>
+
+        <v-text-field label="Password" placeholder="Password" type="password" autocomplete="new-password"
+          :value="loginPassword" @input="setLoginPassword"></v-text-field>
 
         <v-alert type="error" :value="loginError">
-          {{loginError}}
+          {{ loginError }}
         </v-alert>
 
         <v-btn color="green" dark @click="login">
@@ -46,5 +46,4 @@ export default {
 </script>
 
 <style>
-
 </style>

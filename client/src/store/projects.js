@@ -1,3 +1,4 @@
+// import router from '../router';
 import Vue from 'vue';
 import HTTP from '../http';
 
@@ -5,6 +6,7 @@ export default {
   namespaced: true,
   state: {
     projects: [],
+    currentProject: null,
     newProjectName: null,
   },
   actions: {
@@ -29,14 +31,19 @@ export default {
     createProject({ commit, state }) {
       return HTTP().post('/projects', {
         title: state.newProjectName,
-      }).then(({ data }) => {
-        commit('appendProject', data);
-        commit('setNewProjectName', null);
-      });
+      })
+        .then(({ data }) => {
+          commit('appendProject', data);
+          commit('setNewProjectName', null);
+        });
     },
   },
-  getters: {},
+  getters: {
+  },
   mutations: {
+    setCurrentProject(state, project) {
+      state.currentProject = project;
+    },
     setNewProjectName(state, name) {
       state.newProjectName = name;
     },

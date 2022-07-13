@@ -4,12 +4,12 @@ import HTTP from '../http';
 export default {
   namespaced: true,
   state: {
-    registerEmail: null,
-    registerPassword: null,
+    registerEmail: 'hello YOOOO',
+    registerPassword: 'world',
     registerError: null,
-    lopinEmail: null,
-    lopinPassword: null,
-    lopinError: null,
+    loginEmail: 'hello YOOOO',
+    loginPassword: 'world',
+    loginError: null,
     token: null,
   },
   actions: {
@@ -22,12 +22,13 @@ export default {
       return HTTP().post('/auth/register', {
         email: state.registerEmail,
         password: state.registerPassword,
-      }).then(({ data }) => {
-        commit('setToken', data.token);
-        router.push('/');
       })
+        .then(({ data }) => {
+          commit('setToken', data.token);
+          router.push('/');
+        })
         .catch(() => {
-          commit('setRegisterError', 'An error has occurred trying to create your account.');
+          commit('setRegisterError', 'An error has occured trying to create your account.');
         });
     },
     login({ commit, state }) {
@@ -35,12 +36,13 @@ export default {
       return HTTP().post('/auth/login', {
         email: state.loginEmail,
         password: state.loginPassword,
-      }).then(({ data }) => {
-        commit('setToken', data.token);
-        router.push('/');
       })
+        .then(({ data }) => {
+          commit('setToken', data.token);
+          router.push('/');
+        })
         .catch(() => {
-          commit('setLoginError', 'An error has occurred trying to login.');
+          commit('setLoginError', 'An error has occured trying to login.');
         });
     },
   },

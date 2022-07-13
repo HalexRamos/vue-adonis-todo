@@ -1,20 +1,20 @@
 <template>
-  <v-container class="mt-5">
+  <v-container>
     <v-layout row wrap>
       <v-flex xs6 offset-xs3>
         <h1>Register</h1>
-        <v-text-field label="Email" type="email" laceholder="Email" :value="registerEmail" @input="setRegisterEmail">
-        </v-text-field>
-        <v-text-field label="Password" type="password" placeholder="Password" autocomplete="new-password"
-          :value="registerPassword" @input="setRegisterPassword">
-        </v-text-field>
+
+        <v-text-field label="Email" placeholder="Email" :value="registerEmail" @input="setRegisterEmail"></v-text-field>
+
+        <v-text-field label="Password" placeholder="Password" type="password" autocomplete="new-password"
+          :value="registerPassword" @input="setRegisterPassword"></v-text-field>
 
         <v-alert type="error" :value="registerError">
-          {{registerError}}
+          {{ registerError }}
         </v-alert>
 
         <v-btn color="green" dark @click="register">
-          <v-icon>account_circle</v-icon>
+          <v-icon class="mr-2">account_circle</v-icon>
           Register
         </v-btn>
       </v-flex>
@@ -46,5 +46,4 @@ export default {
 </script>
 
 <style>
-
 </style>
